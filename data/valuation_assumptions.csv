@@ -1,0 +1,19 @@
+parameter,UPS,FDX,unit,note
+Valuation date,2025-12-31,2026-05-31,date,Fiscal year end of the latest 10-K (UPS: Dec 31; FedEx: May 31 before its change to a calendar fiscal year)
+Share price at valuation date,99.19,411.75,$,"UPS: 12/31/2025 close. FedEx: 5/29/2026 close before the June 1, 2026 FedEx Freight spin-off ($331.79 spin-adjusted x 1.241)"
+Diluted shares (millions),849.4,239.0,millions,Net income / diluted EPS for the latest fiscal year (10-K)
+Equity beta,0.95,1.33,x,Yahoo Finance 5Y monthly beta (Nov 2026); the notebook re-estimates it from daily prices
+Risk-free rate,0.0418,0.0445,%,"10-year US Treasury: 4.18% on Jan 1, 2026 (Damodaran) and 4.45% on May 29, 2026"
+Equity risk premium,0.0423,0.0423,%,"Damodaran implied S&P 500 equity risk premium, Jan 1, 2026"
+Tax rate (forecast),0.230,0.235,%,UPS 2026 guidance (~23%); FedEx FY26 effective rate (23.5%)
+Revenue growth Y1,0.0117,0.040,%,UPS: 2026 revenue guidance of ~$89.7B vs $88.66B; FedEx: analyst assumption
+Revenue growth Y2,0.030,0.035,%,Analyst assumption
+Revenue growth Y3,0.030,0.030,%,Analyst assumption
+Revenue growth Y4,0.025,0.030,%,Analyst assumption
+Revenue growth Y5,0.025,0.0275,%,Analyst assumption
+Operating margin,0.096,0.070,%,UPS: 2026 adjusted operating margin guidance (9.6%); FedEx: FY26 operating margin excluding $1.16B of one-time charges (7.0%)
+D&A % of revenue,0.042,0.046,%,Latest fiscal year (UPS 4.2%; FedEx 4.6%)
+Capex % of revenue Y1,0.0334,0.040,%,UPS: 2026 capex guidance of ~$3.0B; FedEx: calendar-2026 capex outlook of ~$3.9B (~4% of revenue)
+Capex % of revenue Y2-Y5,0.045,0.046,%,Normalized reinvestment slightly above D&A
+Net working capital % of revenue change,-0.012,0.008,%,Latest operating NWC / revenue
+Terminal growth rate,0.020,0.020,%,Long-run growth below nominal GDP for mature parcel carriers

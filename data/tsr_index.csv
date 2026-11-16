@@ -1,0 +1,37 @@
+company,series,period_end,index_value,source
+UPS,United Parcel Service,2020-12-31,100.00,UPS 10-K FY2025 Item 5 shareowner return performance graph ($100 invested 12/31/2020 with dividends reinvested)
+UPS,United Parcel Service,2021-12-31,133.61,UPS 10-K FY2025 Item 5
+UPS,United Parcel Service,2022-12-31,111.96,UPS 10-K FY2025 Item 5
+UPS,United Parcel Service,2023-12-31,105.29,UPS 10-K FY2025 Item 5
+UPS,United Parcel Service,2024-12-31,87.89,UPS 10-K FY2025 Item 5
+UPS,United Parcel Service,2025-12-31,74.69,UPS 10-K FY2025 Item 5
+UPS,S&P 500 Index,2020-12-31,100.00,UPS 10-K FY2025 Item 5
+UPS,S&P 500 Index,2021-12-31,128.68,UPS 10-K FY2025 Item 5
+UPS,S&P 500 Index,2022-12-31,105.35,UPS 10-K FY2025 Item 5
+UPS,S&P 500 Index,2023-12-31,133.02,UPS 10-K FY2025 Item 5
+UPS,S&P 500 Index,2024-12-31,166.27,UPS 10-K FY2025 Item 5
+UPS,S&P 500 Index,2025-12-31,195.97,UPS 10-K FY2025 Item 5
+UPS,Dow Jones Transportation Average,2020-12-31,100.00,UPS 10-K FY2025 Item 5
+UPS,Dow Jones Transportation Average,2021-12-31,129.04,UPS 10-K FY2025 Item 5
+UPS,Dow Jones Transportation Average,2022-12-31,108.02,UPS 10-K FY2025 Item 5
+UPS,Dow Jones Transportation Average,2023-12-31,121.34,UPS 10-K FY2025 Item 5
+UPS,Dow Jones Transportation Average,2024-12-31,120.71,UPS 10-K FY2025 Item 5
+UPS,Dow Jones Transportation Average,2025-12-31,136.89,UPS 10-K FY2025 Item 5
+FDX,FedEx Corporation,2021-05-31,100.00,FedEx FY26 Annual Report stock performance graph ($100 invested 5/31/2021 with dividends reinvested)
+FDX,FedEx Corporation,2022-05-31,72.20,FedEx FY26 Annual Report
+FDX,FedEx Corporation,2023-05-31,71.70,FedEx FY26 Annual Report
+FDX,FedEx Corporation,2024-05-31,85.20,FedEx FY26 Annual Report
+FDX,FedEx Corporation,2025-05-31,74.80,FedEx FY26 Annual Report
+FDX,FedEx Corporation,2026-05-31,144.30,FedEx FY26 Annual Report
+FDX,S&P 500 Index,2021-05-31,100.00,FedEx FY26 Annual Report
+FDX,S&P 500 Index,2022-05-31,99.70,FedEx FY26 Annual Report
+FDX,S&P 500 Index,2023-05-31,102.60,FedEx FY26 Annual Report
+FDX,S&P 500 Index,2024-05-31,131.50,FedEx FY26 Annual Report
+FDX,S&P 500 Index,2025-05-31,149.30,FedEx FY26 Annual Report
+FDX,S&P 500 Index,2026-05-31,193.80,FedEx FY26 Annual Report
+FDX,Dow Jones Transportation Average,2021-05-31,100.00,FedEx FY26 Annual Report
+FDX,Dow Jones Transportation Average,2022-05-31,90.80,FedEx FY26 Annual Report
+FDX,Dow Jones Transportation Average,2023-05-31,87.10,FedEx FY26 Annual Report
+FDX,Dow Jones Transportation Average,2024-05-31,96.70,FedEx FY26 Annual Report
+FDX,Dow Jones Transportation Average,2025-05-31,93.30,FedEx FY26 Annual Report
+FDX,Dow Jones Transportation Average,2026-05-31,136.00,FedEx FY26 Annual Report

@@ -1,0 +1,49 @@
+statement,line_item,FY2023,FY2024,FY2025,source
+IS,Revenue,90958,91070,88661,UPS 10-K FY2025 (Statements of Consolidated Income); FY2023 from 10-K FY2024
+IS,Compensation and benefits,47092,48093,48605,UPS 10-K FY2025
+IS,Repairs and maintenance,2828,2940,3107,UPS 10-K FY2025
+IS,Depreciation and amortization,3366,3609,3746,UPS 10-K FY2025
+IS,Purchased transportation,13640,13589,10588,UPS 10-K FY2025
+IS,Fuel,4775,4366,4316,UPS 10-K FY2025
+IS,Other occupancy,2019,2117,2269,UPS 10-K FY2025
+IS,Other operating expenses,8097,7888,8163,UPS 10-K FY2025
+IS,Total operating expenses,81817,82602,80794,UPS 10-K FY2025
+IS,Operating income (EBIT),9141,8468,7867,UPS 10-K FY2025
+IS,Investment income and other,219,-160,314,UPS 10-K FY2025
+IS,Interest expense,787,866,1017,UPS 10-K FY2025
+IS,Income before income taxes,8573,7442,7164,UPS 10-K FY2025
+IS,Income tax expense,1865,1660,1592,UPS 10-K FY2025
+IS,Net income,6708,5782,5572,UPS 10-K FY2025
+IS,Diluted EPS ($),7.80,6.75,6.56,UPS 10-K FY2025
+IS,One-time transformation and other charges,,,509,UPS 4Q25 earnings release (2025 network reconfiguration costs; earlier years not used)
+BS,Cash and cash equivalents,3206,6112,5887,UPS 10-K FY2025 and FY2024 (Consolidated Balance Sheets)
+BS,Marketable securities,2866,206,0,UPS 10-K FY2024; FY2025 10-K includes any balance in other current assets
+BS,Accounts receivable net,11216,10871,11209,UPS 10-K FY2025 and FY2024
+BS,Inventories and supplies,0,0,0,Not reported separately (in other current assets)
+BS,Other current assets,2125,2121,1949,UPS 10-K FY2025 and FY2024
+BS,Total current assets,19413,19310,19045,UPS 10-K FY2025 and FY2024
+BS,Property plant and equipment net,36945,37179,37731,UPS 10-K FY2025 and FY2024
+BS,Operating lease right-of-use assets,4308,4149,4263,UPS 10-K FY2025 and FY2024
+BS,Goodwill,4872,4300,5837,UPS 10-K FY2025 and FY2024
+BS,Intangible and other non-current assets,5319,5132,6214,UPS 10-K (intangibles + deferred tax assets + other non-current assets)
+BS,Total assets,70857,70070,73090,UPS 10-K FY2025 and FY2024
+BS,Current debt,3348,1838,608,UPS 10-K (current maturities of long-term debt and finance leases)
+BS,Accounts payable,6340,6302,6633,UPS 10-K FY2025 and FY2024
+BS,Accrued wages and benefits,4703,5045,5104,UPS 10-K (accrued wages and withholdings + accrued group welfare and retirement contributions)
+BS,Current operating lease liabilities,709,733,763,UPS 10-K FY2025 and FY2024
+BS,Other current liabilities,2576,2523,2512,UPS 10-K (self-insurance reserves + other current liabilities)
+BS,Total current liabilities,17676,16441,15620,UPS 10-K FY2025 and FY2024
+BS,Long-term debt,18916,19446,23519,UPS 10-K (long-term debt and finance leases)
+BS,Non-current operating lease liabilities,3756,3635,3700,UPS 10-K FY2025 and FY2024
+BS,Pension and postretirement obligations,6159,6859,6567,UPS 10-K FY2025 and FY2024
+BS,Deferred income tax liabilities,3772,3595,3690,UPS 10-K FY2025 and FY2024
+BS,Other non-current liabilities,3264,3351,3739,UPS 10-K FY2025 and FY2024
+BS,Total shareholders equity,17314,16743,16255,UPS 10-K FY2025 and FY2024
+CF,Cash from operating activities,10238,10122,8450,UPS 10-K FY2025 (Statements of Consolidated Cash Flows)
+CF,Capital expenditures,5158,3909,3685,UPS 10-K FY2025
+CF,Proceeds from disposals,193,1115,700,UPS 10-K FY2025
+CF,Acquisitions net of cash,1329,71,1968,UPS 10-K FY2025
+CF,Dividends paid,5372,5399,5398,UPS 10-K FY2025
+CF,Share repurchases,2250,500,1000,UPS 10-K FY2025
+MKT,Dividends per share ($),6.48,6.52,6.56,UPS quarterly dividends of $1.62 / $1.63 / $1.64
+MKT,Share price at fiscal year end ($),157.23,126.10,99.19,"Close on 12/29/2023, 12/31/2024 and 12/31/2025 (Yahoo Finance history)"

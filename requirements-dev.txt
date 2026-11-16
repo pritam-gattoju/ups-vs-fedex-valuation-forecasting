@@ -1,0 +1,10 @@
+-r requirements.txt
+openpyxl>=3.1
+matplotlib>=3.8
+reportlab>=4.0
+pytest>=8.0
+# for the forecasting notebook (Google Colab already has these)
+yfinance>=0.2.40
+statsmodels>=0.14
+scikit-learn>=1.4
+tensorflow>=2.15

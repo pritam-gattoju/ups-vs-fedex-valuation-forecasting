@@ -1,0 +1,52 @@
+statement,line_item,FY2024,FY2025,FY2026,source
+IS,Revenue,87693,87926,94720,FedEx FY26 Annual Report / 10-K (Consolidated Statements of Income; years ended May 31)
+IS,Salaries and employee benefits,30961,31232,33844,FedEx FY26 10-K
+IS,Purchased transportation,20921,21768,23620,FedEx FY26 10-K
+IS,Rentals and landing fees,4571,4647,4883,FedEx FY26 10-K
+IS,Depreciation and amortization,4287,4264,4369,FedEx FY26 10-K
+IS,Fuel,4710,3775,4052,FedEx FY26 10-K
+IS,Maintenance and repairs,3291,3245,3330,FedEx FY26 10-K
+IS,Separation and other costs,0,38,771,FedEx FY26 10-K
+IS,Business optimization and realignment costs,582,756,366,FedEx FY26 10-K
+IS,Goodwill and other asset impairment charges,157,21,23,FedEx FY26 10-K
+IS,Other operating expenses,12654,12963,13999,FedEx FY26 10-K
+IS,Total operating expenses,82134,82709,89257,FedEx FY26 10-K
+IS,Operating income (EBIT),5559,5217,5463,FedEx FY26 10-K
+IS,Investment income and other,1022,1013,1300,FedEx FY26 10-K (other retirement plans income + interest income + other net)
+IS,Interest expense,745,789,970,FedEx FY26 10-K
+IS,Income before income taxes,5836,5441,5793,FedEx FY26 10-K
+IS,Income tax expense,1505,1349,1360,FedEx FY26 10-K
+IS,Net income,4331,4092,4433,FedEx FY26 10-K
+IS,Diluted EPS ($),17.21,16.81,18.55,FedEx FY26 10-K
+IS,One-time transformation and other charges,739,815,1160,FedEx FY26 10-K (separation + business optimization + impairment charges)
+BS,Cash and cash equivalents,6501,5502,13311,FedEx FY26 and FY25 10-K (Consolidated Balance Sheets; May 31)
+BS,Marketable securities,0,0,0,None reported
+BS,Accounts receivable net,10087,11368,12672,FedEx FY26 and FY25 10-K
+BS,Inventories and supplies,614,602,669,FedEx 10-K (spare parts supplies and fuel)
+BS,Other current assets,1005,914,1251,FedEx 10-K (prepaid expenses and other)
+BS,Total current assets,18207,18386,27903,FedEx FY26 and FY25 10-K
+BS,Property plant and equipment net,41491,41642,42044,FedEx FY26 and FY25 10-K
+BS,Operating lease right-of-use assets,17115,16453,16822,FedEx FY26 and FY25 10-K
+BS,Goodwill,6423,6603,6733,FedEx FY26 and FY25 10-K
+BS,Intangible and other non-current assets,3771,4543,5435,FedEx 10-K (other assets)
+BS,Total assets,87007,87627,98937,FedEx FY26 and FY25 10-K
+BS,Current debt,68,1428,2421,FedEx 10-K (current portion of long-term debt + short-term borrowings)
+BS,Accounts payable,3189,3692,4327,FedEx FY26 and FY25 10-K
+BS,Accrued wages and benefits,2673,2731,3759,FedEx 10-K (accrued salaries and employee benefits)
+BS,Current operating lease liabilities,2463,2565,2680,FedEx FY26 and FY25 10-K
+BS,Other current liabilities,4962,4995,5725,FedEx 10-K (accrued expenses)
+BS,Total current liabilities,13355,15411,18912,FedEx FY26 and FY25 10-K
+BS,Long-term debt,20135,19151,23293,FedEx FY26 and FY25 10-K
+BS,Non-current operating lease liabilities,15053,14272,14549,FedEx FY26 and FY25 10-K
+BS,Pension and postretirement obligations,2010,1698,1625,FedEx FY26 and FY25 10-K
+BS,Deferred income tax liabilities,4482,4205,3664,FedEx FY26 and FY25 10-K
+BS,Other non-current liabilities,4390,4816,5247,FedEx 10-K (self-insurance accruals + other liabilities)
+BS,Total shareholders equity,27582,28074,31647,FedEx FY26 and FY25 10-K
+CF,Cash from operating activities,8312,7036,8925,FedEx FY26 10-K (Consolidated Statements of Cash Flows)
+CF,Capital expenditures,5176,4055,3809,FedEx FY26 10-K
+CF,Proceeds from disposals,114,115,97,FedEx FY26 10-K (asset dispositions and other investing net)
+CF,Acquisitions net of cash,0,0,0,None reported separately
+CF,Dividends paid,1259,1339,1374,FedEx FY26 10-K
+CF,Share repurchases,2500,3017,796,FedEx FY26 10-K
+MKT,Dividends per share ($),5.04,5.52,5.80,FedEx quarterly dividends of $1.26 / $1.38 / $1.45
+MKT,Share price at fiscal year end ($),,,411.75,"May 29, 2026 close before the FedEx Freight spin-off: Yahoo spin-adjusted close $331.79 x 1.241 adjustment factor"
