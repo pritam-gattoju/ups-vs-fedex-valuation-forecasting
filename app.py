@@ -29,7 +29,7 @@ GREY = "#9AA0A6"
 
 
 def money(x, d=0):
-    return f"${x:,.{d}f}"
+    return f"-${abs(x):,.{d}f}" if x < 0 else f"${x:,.{d}f}"
 
 
 def pct(x, d=1):
@@ -97,9 +97,10 @@ with tabs[0]:
             b.metric("DCF value per share", money(r["value_per_share"], 2), pct(r["upside"]), delta_color="normal")
             c.metric("WACC", pct(x.wacc, 2))
             a, b, c = st.columns(3)
-            a.metric("Base-case op. margin", pct(x.op_margin))
-            b.metric("Margin the price implies", pct(im), f"{(im - x.op_margin) * 100:+.1f} pts", delta_color="off")
-            c.metric("Terminal value % of EV", pct(r["tv_share_of_ev"], 0))
+            a.metric("Base margin", pct(x.op_margin), help="Operating margin assumed in the base-case forecast")
+            b.metric("Implied margin", pct(im), f"{(im - x.op_margin) * 100:+.1f} pts", delta_color="off",
+                     help="Operating margin that makes the DCF value equal the share price (reverse DCF)")
+            c.metric("TV % of EV", pct(r["tv_share_of_ev"], 0), help="Share of enterprise value that comes from the terminal value")
 
     ups_x, ups_r, ups_im = summary["UPS"]
     fdx_x, fdx_r, fdx_im = summary["FDX"]
@@ -248,14 +249,14 @@ with tabs[2]:
     m2.metric("Share price", money(x.price, 2))
     m3.metric("WACC", pct(wacc, 2), f"Ke {pct(ke, 2)}", delta_color="off")
     m4.metric("Enterprise value", f"${r['enterprise_value'] / 1000:,.1f}B")
-    m5.metric("Margin the price implies", pct(implied_operating_margin(x)))
+    m5.metric("Implied margin", pct(implied_operating_margin(x)), help="Operating margin that makes value equal the share price")
 
     c1, c2 = st.columns([1.1, 1])
     with c1:
         ft = forecast_table(x, FIRST_FY[t])
         show = ft.T.copy().astype(object)
         for row in show.index:
-            show.loc[row] = [f"{v:.1%}" if row == "Growth" else f"${v:,.0f}" for v in ft[row]]
+            show.loc[row] = [f"{v:.1%}" if row == "Growth" else money(v) for v in ft[row]]
         st.markdown("**Five-year forecast ($ millions)**")
         st.dataframe(show, width="stretch")
     with c2:
@@ -263,10 +264,11 @@ with tabs[2]:
             x=["PV of FCF", "PV of terminal value", "+ Cash", "- Debt", "- Pension (after tax)", "Equity value"],
             measure=["relative", "relative", "relative", "relative", "relative", "total"],
             y=[r["pv_fcf"], r["pv_terminal"], x.cash, -x.debt, -x.pension_after_tax, 0],
-            text=[f"${v / 1000:,.1f}B" for v in [r["pv_fcf"], r["pv_terminal"], x.cash, -x.debt, -x.pension_after_tax, r["equity_value"]]],
+            text=[money(v / 1000, 1) + "B" for v in [r["pv_fcf"], r["pv_terminal"], x.cash, -x.debt, -x.pension_after_tax, r["equity_value"]]],
             connector=dict(line=dict(color="#C9CED6")), increasing=dict(marker_color="#1F3864"),
             decreasing=dict(marker_color="#C0504D"), totals=dict(marker_color=COLOR[t])))
-        fig.update_layout(title="From cash flows to equity value ($ millions)", showlegend=False)
+        fig.update_layout(title="From cash flows to equity value ($ millions)", showlegend=False,
+                          yaxis_range=[0, (r["pv_fcf"] + r["pv_terminal"] + x.cash) * 1.12])
         st.plotly_chart(style_fig(fig, 360), width="stretch")
 
     c1, c2 = st.columns(2)
@@ -277,6 +279,8 @@ with tabs[2]:
         fig = px.imshow(np.array(z), x=[pct(g) for g in gs], y=[pct(wv, 2) for wv in waccs], text_auto="$.0f", aspect="auto",
                         color_continuous_scale="RdYlGn", labels=dict(x="Terminal growth", y="WACC", color="$/share"))
         fig.update_layout(title=f"Value per share: WACC x terminal growth (price {money(x.price)})")
+        fig.update_xaxes(type="category")
+        fig.update_yaxes(type="category")
         st.plotly_chart(style_fig(fig, 360), width="stretch")
     with c2:
         v0 = r["value_per_share"]
@@ -294,7 +298,8 @@ with tabs[2]:
     df = pd.DataFrame(rows)
     fig = px.bar(df, x="Scenario", y="Value per share", text_auto="$.2f", color_discrete_sequence=[COLOR[t]],
                  title="Strategy scenarios (each step adds to the one before)")
-    fig.add_hline(y=x.price, line_dash="dash", line_color=GREY, annotation_text=f"Share price {money(x.price, 2)}")
+    fig.add_hline(y=x.price, line_dash="dash", line_color="#C0504D", annotation_text=f"Share price {money(x.price, 2)}",
+                  annotation_position="top left", annotation_font_color="#C0504D")
     st.plotly_chart(style_fig(fig, 360), width="stretch")
 
 # ============================================================== MONTE CARLO
@@ -324,7 +329,7 @@ with tabs[3]:
     b2.metric("25th percentile", money(p[1]))
     c.metric("Median", money(p[2]))
     d.metric("95th percentile", money(p[4]))
-    e.metric("Chance value > price", pct((sims > x.price).mean(), 0))
+    e.metric("Value > price", pct((sims > x.price).mean(), 0), help="Share of simulations where value per share exceeds the share price")
 
 # ======================================================== PRICE FORECASTING
 with tabs[4]:
@@ -355,8 +360,11 @@ with tabs[4]:
         with c1:
             mt = fo["metrics"][fo["metrics"].ticker == t].drop(columns="ticker").set_index("model")
             st.markdown("**Test-set accuracy** (lower RMSE / MAE / MAPE is better)")
-            st.dataframe(mt.style.format({"RMSE": "${:.2f}", "MAE": "${:.2f}", "MAPE": "{:.2%}", "Directional accuracy": "{:.1%}",
-                                          "RMSE vs naive": "{:+.2%}"}, na_rep="n/a"), width="stretch")
+            shown = pd.DataFrame({"RMSE": mt["RMSE"].map(lambda v: f"${v:.2f}"), "MAE": mt["MAE"].map(lambda v: f"${v:.2f}"),
+                                  "MAPE": mt["MAPE"].map(lambda v: f"{v:.2%}"),
+                                  "Directional accuracy": mt["Directional accuracy"].map(lambda v: "n/a" if pd.isna(v) else f"{v:.1%}"),
+                                  "RMSE vs naive": mt["RMSE vs naive"].map(lambda v: "benchmark" if v == 0 else f"{v:+.2%}")})
+            st.dataframe(shown, width="stretch")
             best = mt["RMSE"].idxmin()
             st.caption(f"Lowest RMSE: **{best}**. The naive 'tomorrow = today' forecast is the benchmark every model has to beat; "
                        "daily prices are close to a random walk, which is why the valuation relies on fundamentals.")
