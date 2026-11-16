@@ -1,0 +1,5 @@
+Ticker,5y annual return,5y annual volatility,Sharpe ratio (5y),Max drawdown (5y),Beta vs S&P 500 (5y monthly),Correlation with SPY (5y daily)
+UPS,-0.0751,0.2892,-0.3981,-0.5792,0.9574,0.5004
+FDX,0.1257,0.3284,0.2611,-0.453,1.2566,0.5018
+SPY,0.1103,0.1732,0.4056,-0.245,1.0,1.0
+IYT,0.0497,0.225,0.0433,-0.2915,1.1731,0.7635

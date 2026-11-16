@@ -1,0 +1,15 @@
+{
+  "run_at_utc": "2026-11-16T21:33:34+00:00",
+  "data_start": "2010-01-04",
+  "data_end": "2026-11-16",
+  "test_days": 252,
+  "demo_mode": false,
+  "tickers": [
+    "UPS",
+    "FDX",
+    "SPY",
+    "IYT"
+  ],
+  "n_features": 31,
+  "monte_carlo_paths": 10000
+}
